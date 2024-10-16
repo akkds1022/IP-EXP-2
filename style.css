@@ -1,0 +1,158 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font Settings */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+.profile-header {
+    background-color: #0044cc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-header:hover {
+    background-color: #003399;
+}
+
+.profile-header .company-name {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700; /* Increased weight for better font contrast */
+}
+
+.profile-header .tagline {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* Profile Content Styling */
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 5px solid #0044cc;
+    transition: transform 0.3s ease; /* Add smooth effect when hovered */
+}
+
+.profile-image img:hover {
+    transform: scale(1.1); /* Image zoom effect on hover */
+}
+
+.profile-details {
+    max-width: 600px;
+}
+
+.profile-details h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 1em;
+    text-align: justify;
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+/* Adding Pseudo-elements */
+.profile-details::before, .profile-details::after {
+    content: '"';
+    font-size: 2em;
+    color: #0044cc;
+    vertical-align: middle;
+}
+
+/* Footer Styling */
+.profile-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0044cc;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.profile-footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.profile-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Link Styling with Attribute Selectors */
+a[href^="mailto:"] {
+    font-style: italic;
+    color: #ffcc00;
+}
+
+/* Pseudo-classes and Pseudo-elements */
+.profile-header:hover {
+    background-color: #003399;
+}
+
+.profile-details::before {
+    content: '“';
+    font-size: 2em;
+    vertical-align: middle;
+    color: #0044cc;
+}
+
+.profile-details::after {
+    content: '”';
+    font-size: 2em;
+    vertical-align: middle;
+    color: #0044cc;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image img {
+        margin-bottom: 20px;
+    }
+}
+
+/* Child Selectors Example */
+.profile-content > .profile-image {
+    margin-right: 20px;
+}
+
+/* Focus Pseudo-class Example */
+a:focus {
+    outline: 2px dashed #ffcc00;
+}
